@@ -65,7 +65,7 @@ services:
 networks:
   brinxai-network:
     driver: bridge
-    name: brinxai-network  # Explicitly set the network name
+    name: brinxai-network-${SERVICE_NAME}  # Explicitly set the network name
 EOF
 else
     cat <<EOF > docker-compose.yml
@@ -87,7 +87,7 @@ services:
 networks:
   brinxai-network:
     driver: bridge
-    name: brinxai-network  # Explicitly set the network name
+    name: brinxai-network-${SERVICE_NAME}  # Explicitly set the network name
 EOF
 fi
 
