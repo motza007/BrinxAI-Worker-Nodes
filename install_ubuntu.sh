@@ -22,12 +22,14 @@ fi
 # Prompt user for unique service ID
 read -p "Enter a unique number for this service instance: " SERVICE_ID
 SERVICE_NAME="worker_${SERVICE_ID}"
-USER_PORT=$((5000 + SERVICE_ID))
 
 # Allow the specified port through the firewall
+# Prompt user for WORKER_PORT
+read -p "Enter the port number for WORKER_PORT (default is 5011): " USER_PORT
+USER_PORT=${USER_PORT:-5011}
+
 echo "Allowing port $USER_PORT through the firewall..."
 sudo ufw allow ${USER_PORT}/tcp
-
 # Create .env file with user-defined WORKER_PORT and SERVICE_NAME
 echo "Creating .env file..."
 cat <<EOF > .env
