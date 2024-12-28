@@ -1,3 +1,6 @@
+หยุดก่อนนนน อานน  มันบาป 
+
+
 # BrinxAI Worker Nodes Setup
 
 Worker Nodes are the operational units of the BrinxAI network, executing the tasks distributed by Central Nodes. They are crucial for the functionality of the network, handling various AI operations such as image and video generation, text transformation, audio processing, website creation, code generation, and more.
